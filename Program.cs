@@ -13,14 +13,18 @@ namespace McpTools
             {
                 Name = "Filesystem MCP Server",
                 Command = @"npx",
-                Arguments = ["-y", "@modelcontextprotocol/server-filesystem", "/tmp"],
-                EnvironmentVariables = new Dictionary<string, string?>()
-                {
-                    ["PATH"] = Path.Combine(
-                        Environment.ExpandEnvironmentVariables("%USERPROFILE%"),
-                        $@"Downloads\node-v22.16.0-win-x64\;{Environment.GetEnvironmentVariable("PATH")}"
-                    ),
-                },
+                Arguments = [
+                    "-y",
+                    "@modelcontextprotocol/server-filesystem",
+                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "tmp"),
+                ],
+                // EnvironmentVariables = new Dictionary<string, string?>()
+                // {
+                //     ["PATH"] = Path.Combine(
+                //         Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
+                //         $@"Downloads\node-v22.16.0-win-x64\;{Environment.GetEnvironmentVariable("PATH")}"
+                //     ),
+                // },
             }));
 
             var client = new OpenAIClient(new("0"), new OpenAIClientOptions { Endpoint = new("http://127.0.0.1:11434/v1/") });
