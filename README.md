@@ -2,6 +2,28 @@
 
 A simple C# app to demo using a MCP server with OpenAI compatible endpoint enabling AI assistants to interact with tools.
 
+```
+> list all the files in /tmp/
+[TOOLCALL_START] list_directory
+[TOOLCALL_END] list_directory (52ms)
+  [ARGS] {"path":"/tmp/"}
+  [RESULT] {"content":[{"type":"text","text":"[FILE] adventures_of_a_clumsy_clown.txt\n[FILE] bananas_gone_wild...
+Here is a list of the files in the `/tmp/` directory:
+
+1. adventures_of_a_clumsy_clown.txt
+2. bananas_gone_wild.txt
+3. bigfoot_s_baby_photos.txt
+4. dancing_p_Enguins_in_disneyland.txt
+5. life_according_to_potato.txt
+6. mysterious_case_of_the_missing_cupcake.txt
+7. stupendous_squirrel_antics.txt
+8. TEST.txt
+9. the_grumpy_cow_diaries.txt
+10. the_little_taco_that_could.txt
+11. the_mysterious_case_of_the_missing_socks.txt
+>
+```
+
 ## Quick Overview
 
 Demonstrates how to:
