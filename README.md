@@ -1,4 +1,4 @@
-# Using a MCP server with an Open AI compatible endpoint (i.e. Ollama)
+# Using a MCP server with an OpenAI compatible endpoint (i.e. Ollama)
 
 A simple C# app to demo using a MCP server with OpenAI compatible endpoint enabling AI assistants to interact with tools.
 
